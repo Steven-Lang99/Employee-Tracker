@@ -18,7 +18,7 @@ class FindAll {
     }
 
     addADepartment() {
-        return this.connection.promise().query('INSERT INTO departments (Names) VALUES')
+        return this.connection.promise().query(`INSERT INTO departments (names) VALUES (?) `)
     }
 
 }

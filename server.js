@@ -30,7 +30,7 @@ function startingPrompt() {
                 addAEmployee()
             } else if (data.start === 'Update an employee role') {
                 updateEmployee()
-            } else (console.log('Exiting'))
+            } else (process.exit())
 
 
 
@@ -55,9 +55,14 @@ function addADepartment() {
             message: 'What is the name of the department?'
         }
     ])
+
         .then((data) => {
-            FindAll.addADepartment(data)
-            startingPrompt()
+            const sql = `INSERT INTO departments (Names) VALUES (?)`
+            connection.query(sql, data.departmentname, (err, result) => {
+                if (err) throw err;
+            })
+
+
         })
 }
 
@@ -129,7 +134,7 @@ function addAEmployee() {
             startingPrompt()
         })
 }
-//Function to update employee
+//Function to update employee. Working progress.
 function updateEmployee() {
 
 }
