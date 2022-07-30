@@ -1,6 +1,6 @@
 const connection = require('./db/connection')
 
-
+//Class to hold all the functions needed for the tables.
 class FindAll {
     constructor(connection) {
         this.connection = connection

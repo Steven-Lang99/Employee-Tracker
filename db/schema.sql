@@ -3,12 +3,12 @@ DROP DATABASE IF EXISTS Employee_Tracker;
 CREATE DATABASE Employee_Tracker;
 
 USE Employee_Tracker;
-
+--First table for the departments
 CREATE TABLE departments(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     names VARCHAR(30) NOT NULL
 );
-
+--Second table for the roles
 CREATE TABLE roles(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE roles(
     INDEX dep_ind (department_id), 
     CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE CASCADE
 );
-
+--Third table for the employees
 CREATE TABLE employee(
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,

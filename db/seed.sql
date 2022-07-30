@@ -1,12 +1,12 @@
 USE Employee_Tracker;
-
+--Values for the department table
 INSERT INTO departments (Names) VALUES
 ('Engineering'),
 ('Finance'),
 ('Legal'),
 ('Sales');
 
-
+--Values for the roles table
 INSERT INTO roles (title, department_id, salary) VALUES
 ('Sales Lead', 4, 100000),
 ('Salesperson', 4, 80000),
@@ -16,7 +16,7 @@ INSERT INTO roles (title, department_id, salary) VALUES
 ('Accountant', 2, 125000),
 ('Legal Team Lead', 3, 250000),
 ('Lawyer', 3, 190000);
-
+--Values for the employee table
 INSERT INTO employee (first_name, last_name, role_id, manager_id ) VALUES 
 ('John', 'Doe', 3, null),
 ('Mike', 'Chan', 4, 3),

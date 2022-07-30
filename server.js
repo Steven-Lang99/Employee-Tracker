@@ -5,7 +5,7 @@ const FindAll = require('./methods')
 
 startingPrompt()
 
-
+//Function to start and prompt the user to make a selection
 function startingPrompt() {
     inquirer.prompt([
         {
@@ -37,8 +37,7 @@ function startingPrompt() {
         })
 };
 
-
-
+//Function to view the departments
 function viewDepartments() {
     FindAll.findDepartment()
         .then((data) => {
@@ -47,7 +46,7 @@ function viewDepartments() {
         })
 
 }
-
+//Function to add to the departments table. Working progress.
 function addADepartment() {
     inquirer.prompt([
         {
@@ -69,7 +68,7 @@ function viewRoles() {
             startingPrompt()
         })
 }
-
+//Function to add to the roles table. Working progress.
 function addARole() {
     inquirer.prompt([
         {
@@ -93,7 +92,7 @@ function addARole() {
             startingPrompt()
         })
 }
-
+//Function to view the employee
 function viewEmployees() {
     FindAll.findEmployee()
         .then((data) => {
@@ -101,7 +100,7 @@ function viewEmployees() {
             startingPrompt()
         })
 }
-
+//Function to add to the employee table. Working progress.
 function addAEmployee() {
     inquirer.prompt([
         {
@@ -130,7 +129,7 @@ function addAEmployee() {
             startingPrompt()
         })
 }
-
+//Function to update employee
 function updateEmployee() {
 
 }

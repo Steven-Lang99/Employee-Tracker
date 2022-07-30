@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 
 
-
+//Setting the connection
 const connection = mysql.createPool({
     host: 'localhost',
     database: 'Employee_Tracker',
@@ -9,8 +9,5 @@ const connection = mysql.createPool({
     password: 'StezLang1995!'
 });
 
-// connection.query('SELECT * FROM department', (err, data) => {
-//     if (err) return console.log(err);
-// })
 
 module.exports = connection;
