@@ -31,7 +31,7 @@ Please click on the license to read more.
 ## Usage
 Please follow to the video for the usage of the application:
 
-[(https://watch.screencastify.com/v/zEemJiOfRHv8yRE97F0U)]
+[(https://watch.screencastify.com/v/2l3arB3LwjI0jadwQwG0)]
 
 ## Credits
 List of collaborators on the application:

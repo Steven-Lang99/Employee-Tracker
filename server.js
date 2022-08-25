@@ -57,12 +57,8 @@ function addADepartment() {
     ])
 
         .then((data) => {
-            const sql = `INSERT INTO departments (Names) VALUES (?)`
-            connection.query(sql, data.departmentname, (err, result) => {
-                if (err) throw err;
-            })
-
-
+            FindAll.addADepartment(data)
+            startingPrompt()
         })
 }
 
@@ -93,7 +89,7 @@ function addARole() {
         }
     ])
         .then((data) => {
-            console.log(data)
+            FindAll.addARole(data)
             startingPrompt()
         })
 }
@@ -126,11 +122,11 @@ function addAEmployee() {
         {
             input: 'input',
             name: 'manager',
-            message: 'What is the manager of the employee?'
+            message: 'Who is the manager of the employee?'
         }
     ])
         .then((data) => {
-            console.log(data)
+            FindAll.addARole(data)
             startingPrompt()
         })
 }
